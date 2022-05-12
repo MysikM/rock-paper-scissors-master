@@ -1,0 +1,17 @@
+@use '../../sass/index' as *;
+
+.header {
+  padding-top: 3rem;
+  &--container {
+    width: 60vw;
+    margin: auto;
+    @include flex(center, space-between);
+    border: 3px solid $header-outline;
+    padding: 0.5rem;
+    border-radius: 8px;
+
+    @include mobile {
+      width: 85vw;
+    }
+  }
+}
