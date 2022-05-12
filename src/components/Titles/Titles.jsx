@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import logoBasic from '../../assets/images/logo.svg';
+import logoLvlTrue from '../../assets/images/logo-bonus.svg';
+import {LvlContext} from "../../context/Toggle";
+import './titles.scss';
 
 const Titles = () => {
+    const {toggle} = useContext(LvlContext);
     return (
-        <div>
-            Titles
-        </div>
+        <img className='logo' src={`${toggle ? logoLvlTrue : logoBasic}`} alt="logo"/>
     );
 };
 
