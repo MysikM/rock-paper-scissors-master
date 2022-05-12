@@ -3,7 +3,7 @@ import {createContext, useState} from "react";
 export const LvlContext = createContext();
 
 const Toggle = ({children}) => {
-    const [toggle, setToggle] = useState(false);
+    const [toggle, setToggle] = useState(true);
 
     return (
         <LvlContext.Provider value={{toggle, setToggle}}>
