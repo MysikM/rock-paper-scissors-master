@@ -1,1 +1,28 @@
 @use '../../sass' as *;
+
+.score {
+  @include flex();
+  flex-direction: column;
+  background: #fff;
+  height: 100%;
+  padding: 2.5rem;
+  border-radius: 8px;
+
+  @include mobile {
+    padding: 2rem;
+  }
+
+  &--title {
+    color: $score-text;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 10px;
+  }
+
+  &--amount {
+    color: $dark-text;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: bold;
+  }
+}

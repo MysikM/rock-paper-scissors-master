@@ -4,6 +4,7 @@
   padding-top: 3rem;
   &--container {
     width: 60vw;
+    height: 15vh;
     margin: auto;
     @include flex(center, space-between);
     border: 3px solid $header-outline;
@@ -12,6 +13,7 @@
 
     @include mobile {
       width: 85vw;
+      height: 10vh;
     }
   }
 }
