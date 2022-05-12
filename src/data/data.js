@@ -5,7 +5,13 @@ import lizard from '../assets/images/icon-lizard.svg';
 import spock from '../assets/images/icon-spock.svg';
 
 
-export const names = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+export const namesFigure = {
+    rock : 'rock',
+    paper : 'paper',
+    scissors : 'scissors',
+    lizard : 'lizard',
+    spock : 'spock'
+};
 
 export const boardItems = [
     {src: rock, title: 'rock' },
@@ -13,4 +19,18 @@ export const boardItems = [
     {src: scissors, title: 'scissors' },
     {src: lizard, title: 'lizard' },
     {src: spock, title: 'spock' },
-]
+];
+
+export const normalGame = {
+    [`${namesFigure.rock}`] : [`${namesFigure.scissors}`],
+    [`${namesFigure.scissors}`] : [`${namesFigure.paper}`],
+    [`${namesFigure.paper}`] : [`${namesFigure.rock}`],
+};
+
+export const modeOnGame = {
+    [`${namesFigure.rock}`] : [`${namesFigure.scissors}`, `${namesFigure.lizard}` ],
+    [`${namesFigure.scissors}`] : [`${namesFigure.paper}`, `${namesFigure.lizard}`],
+    [`${namesFigure.paper}`] : [`${namesFigure.rock}`, `${namesFigure.spock}`],
+    [`${namesFigure.lizard}`] : [`${namesFigure.paper}`, `${namesFigure.spock}`],
+    [`${namesFigure.spock}`] : [`${namesFigure.scissors}`, `${namesFigure.rock}`],
+};

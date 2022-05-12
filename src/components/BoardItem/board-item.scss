@@ -121,4 +121,8 @@
       }
     }
   }
+  &.choose {
+    transform: translate(0%, 0%) !important;
+    transition: 2s;
+  }
 }
