@@ -17,7 +17,7 @@ const MainBoard = () => {
     return (
         <div className='main-board' style={{backgroundImage: `url(${toggle ? lvlUpBg : normalBg})`}}>
             {items.map((item) => (
-                <BoardItem src={item.src} title={item.title} />
+                <BoardItem key={item.title} src={item.src} title={item.title} />
             ))}
         </div>
     );
