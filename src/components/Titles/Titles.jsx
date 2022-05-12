@@ -7,7 +7,7 @@ import './titles.scss';
 const Titles = () => {
     const {toggle} = useContext(LvlContext);
     return (
-        <img className='logo' src={`${toggle ? logoLvlTrue : logoBasic}`} alt="logo"/>
+        <img className='logo' src={`${!toggle ? logoLvlTrue : logoBasic}`} alt="logo"/>
     );
 };
 
