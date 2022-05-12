@@ -1,0 +1,124 @@
+@use '../../sass' as *;
+
+.item {
+  position: absolute;
+  border-radius: 50%;
+  &--container {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.5s;
+
+    @include mobile {
+      width: 110px;
+      height: 110px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    .rock & {
+      background: $rock-gradient;
+    }
+    .paper & {
+      background: $paper-gradient;
+    }
+    .scissors & {
+      background: $scissor-gradient;
+    }
+    .lizard & {
+      background: $lizard-gradient;
+    }
+    .spock & {
+      background: $spock-gradient;
+    }
+
+  }
+
+  &--wrapper {
+    box-shadow: inset 0 6px 2px 0 #babfd4;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+
+    @include mobile {
+      width: 80px;
+      height: 80px;
+    }
+
+
+    .item:hover & {
+      box-shadow: inset 0 -6px 2px 0 #babfd4;
+    }
+  }
+
+  &.rock {
+    box-shadow: $rock-color;
+    transform: translateY(70%);
+    @include mobile {
+      transform: translateY(100%)
+    }
+    &.lvlUp {
+      transform: translate(70%,80%);
+      @include mobile {
+        transform: translate(80%, 110%);
+      }
+    }
+  }
+  &.paper {
+    box-shadow: $paper-color;
+    transform: translate(-85%,-85%);
+    @include mobile {
+      transform: translate(-100%, -100%)
+    }
+    &.lvlUp {
+      transform: translate(100%,-40%);
+      @include mobile {
+        transform: translate(105%, -25%);
+      }
+    }
+  }
+  &.scissors {
+    box-shadow: $scissor-color;
+    transform: translate(85%,-85%);
+    @include mobile {
+      transform: translate(100%, -100%)
+    }
+    &.lvlUp {
+      transform: translateY(-100%);
+      @include mobile {
+        transform: translateY(-110%);
+      }
+    }
+  }
+  &.lizard {
+    box-shadow: $lizard-color;
+    &.lvlUp {
+      transform: translate(-70%,80%);
+      @include mobile {
+        transform: translate(-80%, 110%);
+      }
+    }
+  }
+  &.spock {
+    box-shadow: $spock-color;
+    &.lvlUp {
+      transform: translate(-100%, -40%);
+      @include mobile {
+        transform: translate(-105%, -25%);
+      }
+    }
+  }
+}

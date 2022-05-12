@@ -1,6 +1,8 @@
 @use '../../sass/index' as *;
 
 .main-board {
+  @include flex();
+  position: relative;
   height: 70vh;
   width: 100vw;
   background-repeat: no-repeat;
