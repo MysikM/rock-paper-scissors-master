@@ -13,8 +13,7 @@ const Rules = () => {
             <button className='rules--title__btn' onClick={() => setIsOpen(true)}>
                 Rules
             </button>
-            {isOpen && (
-                <div className='rules--modal' onClick={() => setIsOpen(false)}>
+                <div className='rules--modal' style={{visibility : `${isOpen ? 'visible': 'hidden'}`, opacity: `${isOpen ? 1: 0}`}} onClick={() => setIsOpen(false)}>
                     <div className="rules--container" onClick={(e) => e.stopPropagation()}>
                         <h4 className='rules--title'>Rules</h4>
                         <img className='rules--img' src={`${toggle ? rulesBonus :rules}`} alt="rules img"/>
@@ -23,7 +22,6 @@ const Rules = () => {
                         </button>
                     </div>
                 </div>
-            )}
         </>
     );
 };
