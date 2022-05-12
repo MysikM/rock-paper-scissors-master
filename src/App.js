@@ -1,11 +1,13 @@
 import Header from "./components/Header/Header";
 import MainBoard from "./components/MainBoard/MainBoard";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div className="container">
-       <Header />
+        <Header />
         <MainBoard />
+        <Footer />
     </div>
   );
 }

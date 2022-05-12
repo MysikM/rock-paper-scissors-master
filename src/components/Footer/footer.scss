@@ -1,0 +1,9 @@
+@use '../../sass/index' as *;
+
+.footer {
+  height: 5vh;
+    &--container {
+      @include flex(center, space-between);
+      width: 80vw;
+    }
+}
