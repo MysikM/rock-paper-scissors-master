@@ -5,12 +5,14 @@ import {boardItems} from "../../data/data";
 import {useGameLogic} from "../../hooks/useGameLogic";
 import {UserItem} from "../../context/UserSelectItem";
 import {ScoreContext} from "../../context/Score";
+import {GameStatus} from "../../context/Start";
 
 
 const MatchBoard = () => {
     const {setUserSelect, computerSelect, match} = useGameLogic();
     const {score, setScore} = useContext(ScoreContext);
-    const {userPickContext} = useContext(UserItem);
+    const {userPickContext, setUserPickContext} = useContext(UserItem);
+    const {setIsGameStart} = useContext(GameStatus)
     const [isWin, setIsWin] = useState(false)
     const [computerItemDisplay, setComputerItemDisplay] = useState('');
     const [userItemDisplay, setUserItemDisplay] = useState('');
@@ -26,9 +28,14 @@ const MatchBoard = () => {
             setTimeout(()=>{
                 setScore(rez > 0 ? score + 1 : (rez === 0) ? score : score - 1);
                 setIsWin(rez > 0 ? 'you win' : (rez === 0) ? 'tie' : 'you lose');
+                setUserPickContext('');
             }, 2000);
         }
-    },[computerSelect])
+    },[computerSelect]);
+
+    const restartGame = () => {
+        setIsGameStart(false);
+    }
 
     return (
         <section className='match'>
@@ -41,7 +48,7 @@ const MatchBoard = () => {
             {isWin && (
                 <div className='match--menu'>
                     <h2>{isWin}</h2>
-                    <button>Play again</button>
+                    <button onClick={restartGame}>Play again</button>
                 </div>
             )}
             {computerItemDisplay && (

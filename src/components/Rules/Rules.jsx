@@ -7,7 +7,7 @@ import {LvlContext} from "../../context/Toggle";
 
 const Rules = () => {
     const {toggle} = useContext(LvlContext);
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <>
             <button className='rules--title__btn' onClick={() => setIsOpen(true)}>
