@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useEffect, useLayoutEffect, useState} from 'react';
+import React, { useContext, useEffect, useLayoutEffect, useState} from 'react';
 import './match-board.scss';
 import BoardItem from "../BoardItem/BoardItem";
 import {boardItems} from "../../data/data";
