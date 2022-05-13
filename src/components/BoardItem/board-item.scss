@@ -125,6 +125,9 @@
     transform: scale(1.5) translate(0%, 0%) !important;
     transition: 2s;
   }
+  &.win {
+    box-shadow: 0 0 0 50px rgb(51 67 95 / 25%), 0 0 0 100px rgb(41 58 88 / 25%), 0 0 0 150px rgb(35 54 86 / 25%)
+  }
 }
 
 @keyframes startGame {

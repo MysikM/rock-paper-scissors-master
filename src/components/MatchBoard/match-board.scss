@@ -15,15 +15,18 @@
       font-size: 28px;
       color: #fff;
       top: 100px;
-      left: 15vw;
+      left: 13vw;
       text-transform: uppercase;
+      opacity: 0;
       letter-spacing: 1px;
-      animation: show 1s 3s;
+      animation: show 10s 1s;
     }
+
   }
 
   &--player {
     @include flex();
+    z-index: 2;
 
     &>.item.choose {
       animation: startGame 2s;
@@ -33,13 +36,15 @@
 
   &--computer {
     @include flex();
+    z-index: 1;
 
     &>.item.choose {
-      transform: translate(20vw, 0%) !important;
+      animation: startGameComputer 2s;
+      transform: scale(1.5) translate(20vw, 0%) !important;
     }
 
     h5{
-      left: 62vw;
+      left: 70vw;
     }
 
   }
@@ -48,6 +53,8 @@
     position: absolute;
     @include flex();
     flex-direction: column;
+    animation: show 3s;
+    z-index: 2;
 
     h2 {
       font-size: 54px;
@@ -88,9 +95,21 @@
   }
 }
 
+@keyframes startGameComputer {
+  0% {
+    transform: scale(1.5) translate(0%, 0%);
+  }
+  100% {
+    transform: scale(1.5) translate(20vw, 0%);
+  }
+}
+
 @keyframes show {
   0% {
     opacity: 0;
+  }
+  10%{
+    opacity: 1;
   }
   100% {
     opacity: 1;
