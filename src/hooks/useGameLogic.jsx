@@ -1,4 +1,4 @@
-import {useCallback, useContext, useEffect, useLayoutEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {LvlContext} from "../context/Toggle";
 import {boardItems, modeOnGame, namesFigure} from "../data/data";
 
